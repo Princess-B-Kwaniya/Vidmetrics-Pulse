@@ -1,3 +1,27 @@
+VidMetrics Pulse — YouTube Competitor Intelligence Dashboard
+
+Description
+
+VidMetrics Pulse is a lightweight analytics tool that helps users quickly identify high-performing videos from competitor channels.
+
+Features
+Channel analysis
+Trending indicators
+Sorting + filtering
+Clean dashboard UI
+Tech Stack
+Next.js
+Tailwind CSS
+YouTube Data API
+Vercel
+Key Decisions
+
+I prioritized clarity and speed over feature complexity…
+
+Future Improvements
+AI insights
+competitor comparison
+deeper analytics
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
