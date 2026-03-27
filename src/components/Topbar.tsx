@@ -47,26 +47,26 @@ export function Topbar({ onSearch, isLoading, value, onChange }: TopbarProps) {
   }, []);
 
   return (
-    <header className="fixed top-0 right-0 left-64 h-16 z-40 bg-surface/40 backdrop-blur-2xl border-b border-white/5 flex items-center justify-end px-6">
+    <header className="fixed top-0 left-0 right-0 md:left-64 h-16 z-40 bg-surface/40 backdrop-blur-2xl border-b border-white/5 flex items-center justify-end px-4 md:px-6">
       {/* Pinned Videos Dropdown */}
       <div className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={cn(
-            "flex items-center gap-2 px-4 py-2.5 rounded-lg border transition-all",
+            "flex items-center gap-1 md:gap-2 px-2 md:px-4 py-2 md:py-2.5 rounded-lg border transition-all text-xs md:text-sm",
             isOpen
               ? "bg-primary/20 border-primary text-primary"
               : "bg-[#151926] border-white/5 text-white/60 hover:text-white hover:border-white/10"
           )}
           title="Pinned Videos"
         >
-          <Bookmark className="w-4 h-4" />
+          <Bookmark className="w-3 h-3 md:w-4 md:h-4" />
           {pinnedVideos.length > 0 && (
-            <span className="text-[10px] font-bold">{pinnedVideos.length}</span>
+            <span className="text-[8px] md:text-[10px] font-bold hidden sm:inline">{pinnedVideos.length}</span>
           )}
           <ChevronDown
             className={cn(
-              "w-3 h-3 transition-transform",
+              "w-2.5 h-2.5 md:w-3 md:h-3 transition-transform",
               isOpen && "rotate-180"
             )}
           />
@@ -74,7 +74,7 @@ export function Topbar({ onSearch, isLoading, value, onChange }: TopbarProps) {
 
         {/* Dropdown Menu */}
         {isOpen && (
-          <div className="absolute top-full right-0 mt-2 bg-[#0b0f19] border border-white/10 rounded-xl shadow-2xl overflow-hidden z-50 min-w-[350px] max-h-[400px] overflow-y-auto">
+          <div className="absolute top-full right-0 mt-2 bg-[#0b0f19] border border-white/10 rounded-xl shadow-2xl overflow-hidden z-50 w-64 sm:w-80 md:min-w-[350px] max-h-[400px] overflow-y-auto">
             {pinnedVideos.length === 0 ? (
               <div className="px-4 py-6 text-center text-[12px] text-white/40">
                 No pinned videos yet

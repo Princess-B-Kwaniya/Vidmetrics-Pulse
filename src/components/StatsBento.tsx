@@ -12,15 +12,15 @@ interface StatsBentoProps {
 
 export function StatsBento({ channel, videos }: StatsBentoProps) {
   return (
-    <section className="mb-20">
-      <div className="mb-8">
-        <h3 className="text-2xl font-black text-white tracking-tighter" style={{ fontFamily: '"Manrope", sans-serif' }}>
+    <section className="mb-12 md:mb-20">
+      <div className="mb-6 md:mb-8">
+        <h3 className="text-xl md:text-2xl font-black text-white tracking-tighter" style={{ fontFamily: '"Manrope", sans-serif' }}>
           Key Insights
         </h3>
-        <p className="text-[12px] text-[#a7aab9]/50 uppercase tracking-[0.2em] mt-2">Performance Metrics</p>
+        <p className="text-[10px] md:text-[12px] text-[#a7aab9]/50 uppercase tracking-[0.2em] mt-1.5 md:mt-2">Performance Metrics</p>
       </div>
       
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {/* Subscribers Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,27 +29,27 @@ export function StatsBento({ channel, videos }: StatsBentoProps) {
           className="col-span-1 relative group"
         >
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-          <div className="relative bg-gradient-to-br from-[#151926] to-[#0f131e] rounded-[2.5rem] p-8 flex flex-col justify-between border border-primary/20 hover:border-primary/40 shadow-2xl transition-all duration-500 overflow-hidden">
+          <div className="relative bg-gradient-to-br from-[#151926] to-[#0f131e] rounded-xl md:rounded-[2.5rem] p-4 md:p-8 flex flex-col justify-between border border-primary/20 hover:border-primary/40 shadow-2xl transition-all duration-500 overflow-hidden">
             <div className="absolute -right-8 -top-8 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
               <Users className="w-40 h-40" />
             </div>
             <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2.5 rounded-xl bg-primary/15 border border-primary/30">
-                  <Users className="w-4 h-4 text-primary" />
+              <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
+                <div className="p-1.5 md:p-2.5 rounded-lg md:rounded-xl bg-primary/15 border border-primary/30">
+                  <Users className="w-3 h-3 md:w-4 md:h-4 text-primary" />
                 </div>
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#a7aab9] opacity-70" style={{ fontFamily: '"Inter", sans-serif' }}>
+                <p className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] text-[#a7aab9] opacity-70" style={{ fontFamily: '"Inter", sans-serif' }}>
                   Total Subscribers
                 </p>
               </div>
-              <h3 className="text-5xl font-[950] tracking-tighter text-white leading-none mb-1 group-hover:text-primary transition-colors duration-300" style={{ fontFamily: '"Manrope", sans-serif' }}>
+              <h3 className="text-3xl md:text-5xl font-[950] tracking-tighter text-white leading-none mb-1 group-hover:text-primary transition-colors duration-300" style={{ fontFamily: '"Manrope", sans-serif' }}>
                 {formatNumber(channel.subscribers)}
               </h3>
-              <p className="text-[11px] text-[#a7aab9]/50 font-bold uppercase tracking-widest">audience reach</p>
+              <p className="text-[9px] md:text-[11px] text-[#a7aab9]/50 font-bold uppercase tracking-widest">audience reach</p>
             </div>
-            <div className="relative z-10 flex items-center gap-2.5 mt-6 text-[#50e3c2] font-black text-[10px] bg-[#50e3c2]/10 px-4 py-2.5 rounded-full border border-[#50e3c2]/30 uppercase tracking-widest shadow-lg hover:shadow-[0_0_20px_rgba(80,227,194,0.2)] transition-all">
-              <TrendingUp className="w-3 h-3 animate-pulse" />
-              <span>+{formatNumber(channel.monthlyGrowth)} this month</span>
+            <div className="relative z-10 flex items-center gap-2 mt-4 md:mt-6 text-[#50e3c2] font-black text-[8px] md:text-[10px] bg-[#50e3c2]/10 px-3 md:px-4 py-1.5 md:py-2.5 rounded-full border border-[#50e3c2]/30 uppercase tracking-widest shadow-lg hover:shadow-[0_0_20px_rgba(80,227,194,0.2)] transition-all w-fit">
+              <TrendingUp className="w-2.5 h-2.5 md:w-3 md:h-3 animate-pulse" />
+              <span className="text-[7px] md:text-[10px]">+{formatNumber(channel.monthlyGrowth)} this month</span>
             </div>
           </div>
         </motion.div>

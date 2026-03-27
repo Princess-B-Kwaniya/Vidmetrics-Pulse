@@ -73,17 +73,17 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed left-0 top-0 h-screen z-40 flex flex-col bg-[#0b0f19] w-64 border-r border-white/5 shadow-2xl">
-      <div className="px-8 py-10">
-        <h1 className="text-xl font-extrabold tracking-tight text-white flex flex-col leading-none">
+    <aside className="hidden md:flex md:w-64 md:flex-col md:fixed md:left-0 md:top-0 md:h-screen md:z-40 bg-[#0b0f19] border-r border-white/5 shadow-2xl">
+      <div className="px-4 md:px-8 py-6 md:py-10">
+        <h1 className="text-lg md:text-xl font-extrabold tracking-tight text-white flex flex-col leading-none">
           Pulse Analytics
         </h1>
-        <p className="text-[9px] uppercase tracking-[0.2em] font-black text-primary/80 mt-1.5 opacity-80">
+        <p className="text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-black text-primary/80 mt-1.5 opacity-80">
           Premium Tier
         </p>
       </div>
       
-      <nav className="flex-1 px-3 space-y-1">
+      <nav className="flex-1 px-2 md:px-3 space-y-1">
         {NAV_ITEMS.map((item) => {
           const isActive = pathname === item.href;
           return (

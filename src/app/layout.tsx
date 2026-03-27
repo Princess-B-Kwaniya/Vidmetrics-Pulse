@@ -25,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
@@ -33,7 +34,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${manrope.variable} antialiased font-body bg-[#060910] text-[#a7aab9]`}
       >
-        <div className="min-h-screen relative flex flex-col">
+        <div className="min-h-screen relative flex flex-col md:flex-row">
           {children}
         </div>
       </body>
