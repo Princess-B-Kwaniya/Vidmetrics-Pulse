@@ -1,0 +1,19 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#0b0f19" stroke="#8d98ff" stroke-width="2"/>
+  
+  <!-- Pulse waves -->
+  <g stroke="#8d98ff" stroke-width="3" fill="none" stroke-linecap="round">
+    <!-- Central pulse line -->
+    <path d="M 30 100 L 50 100 L 60 70 L 75 130 L 90 80 L 105 120 L 120 85 L 140 100 L 170 100" stroke="#50e3c2" stroke-width="3"/>
+    
+    <!-- Outer pulse 1 -->
+    <path d="M 40 100 Q 50 85 60 75 Q 75 60 90 70 Q 105 80 120 75 Q 140 70 160 100" stroke="#8d98ff" opacity="0.6"/>
+    
+    <!-- Outer pulse 2 -->
+    <path d="M 35 100 Q 45 115 60 125 Q 75 140 90 130 Q 105 120 120 125 Q 140 130 165 100" stroke="#8d98ff" opacity="0.4"/>
+  </g>
+  
+  <!-- Center dot -->
+  <circle cx="100" cy="100" r="4" fill="#50e3c2"/>
+</svg>

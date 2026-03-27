@@ -74,8 +74,15 @@ export function Sidebar() {
 
   return (
     <aside className="fixed left-0 top-0 h-screen z-40 flex flex-col bg-[#0b0f19] w-64 border-r border-white/5 shadow-2xl">
-      <div className="px-8 py-10">
-        <h1 className="text-xl font-extrabold tracking-tight text-white flex flex-col leading-none">
+      <div className="px-8 py-8">
+        {/* Logo */}
+        <div className="mb-6 flex items-center justify-center">
+          <div className="w-12 h-12">
+            <Image src="/logo.svg" alt="Vidmetrics Pulse" width={48} height={48} className="w-full h-full" />
+          </div>
+        </div>
+        
+        <h1 className="text-xl font-extrabold tracking-tight text-white flex flex-col leading-none text-center">
           Pulse Analytics
         </h1>
         <p className="text-[9px] uppercase tracking-[0.2em] font-black text-primary/80 mt-1.5 opacity-80">
