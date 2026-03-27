@@ -11,9 +11,9 @@ Features :
  Clean dashboard UI
 
 Tech Stack :
- Next.js
- Tailwind CSS
- YouTube Data API
+ Next.js,
+ Tailwind CSS,
+ YouTube Data API,
  Vercel
  
 Key Decision - I prioritized clarity and speed over feature complexity…
