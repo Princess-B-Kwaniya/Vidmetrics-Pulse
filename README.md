@@ -18,7 +18,8 @@ Key Decisions
 
 I prioritized clarity and speed over feature complexity…
 
-Future Improvements
+Future Improvements :
+
 AI insights
 competitor comparison
 deeper analytics
