@@ -226,6 +226,13 @@ export default function Home() {
           {!isLoading && !data && !error && (
             <div className="flex flex-col items-center justify-center min-h-[calc(100vh-200px)] gap-16">
               <div className="w-full max-w-3xl text-center space-y-8">
+                {/* Logo */}
+                <div className="flex justify-center">
+                  <div className="w-24 h-24 mb-4">
+                    <img src="/VIDMETRICS PULSE LOGO.png" alt="Vidmetrics Pulse" className="w-full h-full" />
+                  </div>
+                </div>
+                
                 <div className="space-y-4">
                   <h2 className="text-6xl font-black text-white tracking-tighter" style={{ fontFamily: '"Manrope", sans-serif' }}>
                     Analyze Any Creator
